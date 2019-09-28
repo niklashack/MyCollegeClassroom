@@ -1,0 +1,29 @@
+<div class="section">
+<nav class="navbar is-fixed-top">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item">
+                Kolleg
+            </a>
+            <span class="navbar-burger burger" [ngClass]="{'is-active': showBurgerMenu}" target="navbarMenuStudents"
+            (click)="showBurgerMenu=!showBurgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </div>
+        <div id="navbarMenuStudents" [ngClass]="{'is-active': showBurgerMenu}" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" routerLink="/kolleg" routerLinkActive="is-active-link" (click)="showBurgerMenu=!showBurgerMenu">
+                    Students
+                </a>
+                <a class="navbar-item" routerLink="/dashboard" routerLinkActive="is-active-link" (click)="showBurgerMenu=!showBurgerMenu">
+                    Dashboard
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+</div>
+<router-outlet></router-outlet>
+<!-- <app-messages></app-messages> -->
